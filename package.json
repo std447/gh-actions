@@ -1,0 +1,12 @@
+{
+  "name": "github-actions-workflow-learning",
+  "version": "1.0.0",
+  "description": "Learn Github Actions workflow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Chinmay",
+  "license": "ISC"
+}
