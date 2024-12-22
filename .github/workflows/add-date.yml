@@ -1,0 +1,24 @@
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  add-date:
+    name: ${{ matrix.os }} command line arg
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ windows-latest, macos-latest, ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up node
+      uses: action/setup-node@v4
+      with:
+        node-version: 20.x
+    - name: Run npm command
+      run: npm run try -- --date ${{ env.date }}
+      env:
+        date: echo `date`
+    
+    
+    
