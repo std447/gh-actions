@@ -1,6 +1,6 @@
 const { argv } = require("node:process")
 
-const {super_secret: secret = "no secret"} = process.env;
+const {SUPER_SECRET: secret = "no secret"} = process.env;
 console.log("secret ",secret);
 
 // console.log("argv",Array.from(argv));
