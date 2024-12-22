@@ -5,8 +5,15 @@ on:
   workflow_dispatch:
     
 jobs:
-  check-bats-version:
-    runs-on: ubuntu-latest
-    steps: 
-    - run: date
+  test:
+    name: check date on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+    steps:
+    - name: Date
+      run: |
+        echo ${{ matrix.os }}
+        date
     
